@@ -1,0 +1,20 @@
+.anime-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.anime-image__container {
+  justify-content: center;
+  align-items: center;
+}
+.anime-image__container > img {
+  width: 100%;
+  aspect-ratio: 1/1.6;
+  object-fit: cover;
+}
+.anime-item__title {
+  flex-grow: 1;
+  margin: 0.3rem 0rem;
+  padding: 0rem 0.6rem;
+}

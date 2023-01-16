@@ -1,0 +1,70 @@
+@import "../../variables.css";
+.nav-link {
+  color: var(--main-text-color);
+  font-size: 1.3rem;
+  margin: 0rem 0.6rem;
+  padding: 0.2rem;
+  position: relative;
+}
+.nav-link::before {
+  bottom: 0;
+  left: 0;
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0%;
+  background-color: var(--main-text-color);
+}
+.nav-link:hover::before {
+  width: 100%;
+  transition: width 0.33s linear;
+}
+.main-nav__links {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+}
+.main-nav {
+  padding: 0.5rem 0.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.search-bar {
+  border-radius: 0.9rem;
+  display: flex;
+  align-items: center;
+  background-color: var(--main-input-field-color);
+  padding: 0.2rem 0.4rem;
+  min-width: 240px;
+}
+.search-bar > input {
+  background-color: inherit;
+  flex-grow: 1;
+  margin: 0rem 0.4rem;
+  padding: 0.3rem 0.2rem;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+}
+.hamburger-menu {
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  .hamburger-menu {
+    display: block;
+  }
+  .main-nav__links {
+    display: none;
+  }
+  .search-bar__wrapper {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+  }
+  .main-nav {
+    justify-content: center;
+  }
+}
