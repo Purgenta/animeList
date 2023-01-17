@@ -4,7 +4,6 @@
   list-style-type: none;
   color: var(--main-text-color);
 }
-
 .pagination a {
   font-size: 1.4rem;
   color: inherit;
@@ -12,7 +11,6 @@
   padding: 0.2rem;
   background: linear-gradient(to right, #cb2d3e, #ef473a);
 }
-
 .pagination a.current {
   background: linear-gradient(to right, #327bc7, #3b92ed);
 }
