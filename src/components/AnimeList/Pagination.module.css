@@ -12,3 +12,6 @@
   padding: 0.6rem;
   background: linear-gradient(to right, #cb2d3e, #ef473a);
 }
+.pagination .active {
+  font-weight: bold;
+}
