@@ -1,13 +1,17 @@
 .pagination {
+  margin: 2rem 0rem;
   display: flex;
   justify-content: center;
   list-style-type: none;
+  gap: 0.6rem;
   color: var(--main-text-color);
 }
 .pagination a {
   font-size: 1.4rem;
   color: inherit;
-  margin: 0.15rem;
-  padding: 0.2rem;
+  padding: 0.6rem;
   background: linear-gradient(to right, #cb2d3e, #ef473a);
+}
+.pagination .active {
+  font-weight: bold;
 }

@@ -22,7 +22,7 @@ export default function Navigation(props) {
           </NavLink>
         </li>
         <li className="main-nav__link">
-          <NavLink className={style["nav-link"]} to={"/currently-airring"}>
+          <NavLink className={style["nav-link"]} to={"/currently-airing/1"}>
             Currently Airring
           </NavLink>
         </li>

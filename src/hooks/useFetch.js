@@ -10,8 +10,10 @@ const useFetch = (url, config = {}) => {
       setIsloading(true);
       const response = await fetch(requestedUrl, config);
       if (!response.ok) setError("Error processing the request");
-      const responseData = await response.json();
-      setData(responseData);
+      else {
+        const responseData = await response.json();
+        setData(responseData);
+      }
     } catch (error) {
       setError("Error during communication with the server");
     } finally {

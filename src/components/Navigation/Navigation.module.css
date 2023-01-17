@@ -27,7 +27,8 @@
   align-items: center;
 }
 .main-nav {
-  padding: 0.5rem 0.3rem;
+  width: 100%;
+  padding: 1rem 0.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -63,6 +64,11 @@
     display: flex;
     justify-content: center;
     flex-grow: 1;
+  }
+  .search-bar {
+    position: absolute;
+    left: 0;
+    right: 0;
   }
   .main-nav {
     justify-content: center;
