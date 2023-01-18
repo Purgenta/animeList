@@ -11,7 +11,6 @@ const CurrentlyAiring = (props) => {
     page = 1;
   }
   const url = `anime?status=airing&order_by=score&sort=desc&limit=15&page=${page}`;
-  console.log(page, url);
   const [response, isLoading, error, fetchRequest] = useFetch(url);
   useEffect(() => {
     fetchRequest();
@@ -30,7 +29,6 @@ const CurrentlyAiring = (props) => {
           baseUrl={"/currently-airing"}
         ></Pagination>
       )}
-      <h1>{page}</h1>
     </section>
   );
 };

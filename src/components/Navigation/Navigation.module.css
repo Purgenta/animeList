@@ -39,6 +39,7 @@
   align-items: center;
   background-color: var(--main-input-field-color);
   padding: 0.2rem 0.4rem;
+  padding-right: 0.65rem;
   min-width: 240px;
 }
 .search-bar > input {
@@ -64,11 +65,6 @@
     display: flex;
     justify-content: center;
     flex-grow: 1;
-  }
-  .search-bar {
-    position: absolute;
-    left: 0;
-    right: 0;
   }
   .main-nav {
     justify-content: center;

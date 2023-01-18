@@ -33,7 +33,7 @@ const Pagination = ({ pagination, baseUrl }) => {
       return (
         <li key={value}>
           <Link
-            className={value === current_page ? "active" : ""}
+            className={value === current_page ? style["active"] : ""}
             to={`${baseUrl}/${value}`}
           >
             {value}

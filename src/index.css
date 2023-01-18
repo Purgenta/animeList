@@ -22,10 +22,11 @@ a {
 #main-header {
   position: fixed;
   z-index: 2;
+  background-color: #070606;
   width: 100%;
 }
 #root {
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
