@@ -1,0 +1,5 @@
+.modal {
+  position: fixed;
+  width: 100%;
+  background-color: var(--main-overlay-color);
+}

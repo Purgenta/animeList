@@ -13,6 +13,7 @@ const AnimeList = ({ data }) => {
     return (
       <AnimeItem
         image_url={image_url}
+        mal_id={mal_id}
         shouldDefer={9 <= index}
         key={mal_id}
         title={title}

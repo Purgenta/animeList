@@ -1,0 +1,39 @@
+@import url("../../variables.css");
+section.stats {
+  display: flex;
+  justify-content: center;
+}
+.score-information {
+  border-right: 1px solid;
+  padding-right: 0.6rem;
+  margin-right: 0.2rem;
+}
+.score-information > h3 {
+  padding: 0.2rem 0.8rem;
+  text-align: center;
+  margin: 0.2rem;
+  background: var(--main-button-background);
+}
+.score-information > .score {
+  text-align: center;
+}
+.scored_by {
+  margin-top: 0.6rem;
+  text-align: center;
+}
+
+ul.rankings {
+  list-style-type: none;
+  display: flex;
+  padding: 0.3rem;
+  gap: 0.8rem;
+}
+h4.studio-name {
+  margin-top: 1rem;
+  padding: 0.3rem;
+}
+@media screen and (min-width: 700px) {
+  section.stats {
+    grid-column: span 2 / auto;
+  }
+}
