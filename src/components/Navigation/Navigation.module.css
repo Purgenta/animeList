@@ -28,7 +28,7 @@
 }
 .main-nav {
   width: 100%;
-  padding: 1rem 0.5rem;
+  padding: 0.8rem 0.6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -40,7 +40,8 @@
   background-color: var(--main-input-field-color);
   padding: 0.2rem 0.4rem;
   padding-right: 0.65rem;
-  min-width: 240px;
+  min-width: 220px;
+  margin: 0rem 0.8rem;
 }
 .search-bar > input {
   background-color: inherit;
@@ -54,7 +55,7 @@
 .hamburger-menu {
   display: none;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 830px) {
   .hamburger-menu {
     display: block;
   }

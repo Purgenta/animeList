@@ -7,11 +7,15 @@ export default function AnimeStats({
   studios,
   scored_by,
 }) {
+  let studioName = "No studio name";
+  if (studios.length > 0 && studios[0]?.name) {
+    studioName = studios[0].name;
+  }
   return (
     <section className={style["stats"]}>
       <div className={style["score-information"]}>
         <h3>Score</h3>
-        <h2 className={style["score"]}>{score || "No score yet"}</h2>
+        <h2 className={style["score"]}>{score || "No score"}</h2>
         {score && (
           <p className={style["scored_by"]}>
             {scored_by} <span>users</span>
@@ -34,9 +38,7 @@ export default function AnimeStats({
             <h3 className="stat">Members: {members}</h3>
           </li>
         </ul>
-        <h4 className={style["studio-name"]}>
-          Studio: {studios[0]["name"]} {}
-        </h4>
+        <h4 className={style["studio-name"]}>Studio: {studioName}</h4>
       </div>
     </section>
   );

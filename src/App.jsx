@@ -4,13 +4,15 @@ import { lazy, Suspense } from "react";
 import Navigation from "./components/Navigation/Navigation";
 import ReactDOM from "react-dom";
 import Loading from "./components/Loading/Loading";
-import CurrentlyAiring from "./components/CurrentlyAiring/CurrentlyAiring";
 const DetailedAnime = lazy(() => {
   return import("./components/DetailedAnime/DetailedAnime");
 });
 const header = document.querySelector("#main-header");
 const Home = lazy(() => {
   return import("./components/Home/Home");
+});
+const CurrentlyAiring = lazy(() => {
+  return import("./components/CurrentlyAiring/CurrentlyAiring");
 });
 function App() {
   return (

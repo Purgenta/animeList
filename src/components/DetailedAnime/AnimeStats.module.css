@@ -37,3 +37,11 @@ h4.studio-name {
     grid-column: span 2 / auto;
   }
 }
+@media screen and (max-width: 460px) {
+  section.stats {
+    flex-wrap: wrap;
+  }
+  .score-information {
+    border: none;
+  }
+}
