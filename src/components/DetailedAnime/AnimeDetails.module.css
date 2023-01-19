@@ -50,24 +50,7 @@ h4.studio-name {
   .primary-info {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
-  section.stats {
-    grid-column: span 2 / auto;
-  }
   .hero-img__container {
     justify-content: right;
-  }
-}
-@media screen and (min-width: 700px) {
-  section.stats {
-    grid-column: span 2 / auto;
-  }
-}
-
-@media screen and (max-width: 460px) {
-  section.stats {
-    flex-wrap: wrap;
-  }
-  .score-information {
-    border: none;
   }
 }

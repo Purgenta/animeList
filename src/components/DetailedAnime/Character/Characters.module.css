@@ -1,0 +1,7 @@
+section.characters {
+  margin-top: 2rem;
+  padding: 0.5rem;
+}
+section.characters > h2 {
+  margin: 0.6rem;
+}

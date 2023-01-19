@@ -14,7 +14,9 @@ export default function DetailedAnime(props) {
     <>
       {isLoading && <Loading></Loading>}
       {error && <Navigate to={"/error"}></Navigate>}
-      {response && <AnimeDetails animeData={response.data}></AnimeDetails>}
+      {response && (
+        <AnimeDetails mal_id={id} animeData={response.data}></AnimeDetails>
+      )}
     </>
   );
 }

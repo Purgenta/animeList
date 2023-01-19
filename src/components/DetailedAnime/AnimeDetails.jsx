@@ -1,6 +1,7 @@
 import style from "./AnimeDetails.module.css";
 import AnimeStats from "./AnimeStats";
-export default function DetailedAnime({ animeData }) {
+import Characters from "./Character/Characters";
+export default function DetailedAnime({ animeData, mal_id }) {
   const {
     images: {
       webp: { image_url },
@@ -34,6 +35,7 @@ export default function DetailedAnime({ animeData }) {
           scored_by={scored_by}
         ></AnimeStats>
       </div>
+      <Characters mal_id={mal_id}></Characters>
     </section>
   );
 }
