@@ -4,4 +4,9 @@ section.characters {
 }
 section.characters > h2 {
   margin: 0.6rem;
+  text-align: center;
+}
+.empty {
+  padding: 2rem;
+  text-align: center;
 }
