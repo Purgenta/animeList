@@ -26,6 +26,7 @@ function App() {
             element={<CurrentlyAiring />}
           ></Route>
           <Route path="/anime/:id" element={<DetailedAnime />}></Route>
+          <Route path="/character/:id"></Route>
           <Route path="/" element={<Home />}></Route>
           <Route path="" element={<Home />}></Route>
         </Routes>

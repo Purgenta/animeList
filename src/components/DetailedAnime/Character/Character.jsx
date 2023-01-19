@@ -16,7 +16,7 @@ export default function Character({ character, voice_actor }) {
   } = voice_actor;
   return (
     <div className={style["character"]}>
-      <div className="wrapper">
+      <div className={style["wrapper"]}>
         <div className={style["character-img__container"]}>
           <img
             src={image_url}
@@ -26,7 +26,8 @@ export default function Character({ character, voice_actor }) {
         </div>
         <h4 className={style["character-name"]}>{name}</h4>
       </div>
-      <div className="wrapper">
+      <div className={style["wrapper"]}>
+        <h4 className={style["voice-name"]}>{voiceName}</h4>
         <div className={style["voice-img__container"]}>
           <img
             src={voice_img}
@@ -34,7 +35,6 @@ export default function Character({ character, voice_actor }) {
             alt={`Image of ${voiceName}`}
           ></img>
         </div>
-        <h4 className={style["voice-name"]}>{voiceName}</h4>
       </div>
     </div>
   );
