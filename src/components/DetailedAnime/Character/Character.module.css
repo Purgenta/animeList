@@ -1,6 +1,6 @@
 .character {
   display: grid;
-  gap: 1rem;
+  gap: 10rem;
   grid-template-columns: 1fr 1fr;
   justify-content: space-between;
   margin: 3.5rem 0rem;
@@ -14,13 +14,27 @@
   display: flex;
   justify-content: center;
 }
+.character-name,
+.voice-name {
+  margin: 0.3rem;
+  width: 80px;
+}
 .character-name {
   text-align: left;
 }
 .voice-name {
-  text-align: right;
+  text-align: end;
 }
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+.wrapper,
+.wrapper-voice {
+  display: flex;
+  justify-content: right;
+}
+div.wrapper-voice {
+  justify-content: left;
+}
+@media screen and (max-width: 700px) {
+  .character {
+    gap: 0;
+  }
 }

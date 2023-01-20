@@ -35,6 +35,7 @@ export default function DetailedAnime({ animeData, mal_id }) {
           scored_by={scored_by}
         ></AnimeStats>
       </div>
+      <p className={style["synopsis"]}>{synopsis || "No synopsis provided"}</p>
       <Characters mal_id={mal_id}></Characters>
     </section>
   );
