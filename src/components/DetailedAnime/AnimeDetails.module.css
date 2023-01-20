@@ -46,6 +46,16 @@ h4.studio-name {
   margin-top: 1rem;
   padding: 0.3rem;
 }
+p.synopsis {
+  width: 70%;
+  max-width: 700px;
+  margin: 2rem auto;
+  text-align: center;
+}
+p.synopsis::first-letter {
+  font-size: 1.6rem;
+  font-weight: bolder;
+}
 @media screen and (min-width: 700px) {
   .primary-info {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));

@@ -26,7 +26,7 @@ export default function Character({ character, voice_actor }) {
         </div>
         <h4 className={style["character-name"]}>{name}</h4>
       </div>
-      <div className={style["wrapper"]}>
+      <div className={style["wrapper-voice"]}>
         <h4 className={style["voice-name"]}>{voiceName}</h4>
         <div className={style["voice-img__container"]}>
           <img

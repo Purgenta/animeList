@@ -8,7 +8,7 @@ const Pagination = ({ pagination, baseUrl }) => {
     paginationLinks = generateRange(1, last_visible_page).map((value) => {
       return (
         <li key={value}>
-          <Link to={`${baseUrl}/${value}`}>i</Link>
+          <Link to={`${baseUrl}/${value}`}>{value}</Link>
         </li>
       );
     });
