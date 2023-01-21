@@ -16,17 +16,16 @@ a {
   text-decoration: none;
 }
 #root {
+  display: flex;
   flex-grow: 1;
   padding: 0.8rem 0.2rem;
+  margin-top: 4rem;
 }
 #main-header {
   position: fixed;
   z-index: 2;
   background-color: #070606;
   width: 100%;
-}
-#root {
-  margin-top: 4rem;
 }
 input:-webkit-autofill,
 input:-webkit-autofill:hover,

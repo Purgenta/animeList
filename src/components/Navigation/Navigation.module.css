@@ -43,11 +43,13 @@
   border-radius: 0.9rem;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background-color: var(--main-input-field-color);
   padding: 0.2rem 0.4rem;
   padding-right: 0.65rem;
-  min-width: 220px;
-  margin: 0rem 0.8rem;
+  max-width: 350px;
+  min-width: 200px;
+  flex-grow: 1;
 }
 .search-bar > input {
   background-color: inherit;
@@ -82,12 +84,21 @@ ul.active {
   .search-bar__wrapper {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-grow: 1;
+    margin-right: 0.8rem;
   }
   .main-nav {
-    justify-content: center;
+    justify-content: space-between;
   }
   .nav-close {
     display: inline-block;
+  }
+  .nav-link {
+    font-size: 1.6rem;
+    font-weight: bolder;
+  }
+  .search-bar > input {
+    font-size: 0.9rem;
   }
 }

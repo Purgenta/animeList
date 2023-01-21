@@ -17,7 +17,7 @@ export default function DetailedAnime({ animeData, mal_id }) {
     aired: { from, to },
   } = animeData;
   return (
-    <section className="detailed-anime">
+    <section className={style["detailed-anime"]}>
       <div className={style["primary-info"]}>
         <div className={style["hero-img__container"]}>
           <img

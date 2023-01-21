@@ -1,5 +1,9 @@
-.currently-airing {
+.results {
   padding: 0.6rem 0.8rem;
+  display: flex;
+  width: 100%;
+  flex-grow: 1;
+  flex-direction: column;
 }
 .section-title {
   text-align: center;

@@ -15,6 +15,9 @@ const Home = lazy(() => {
 const CurrentlyAiring = lazy(() => {
   return import("./components/CurrentlyAiring/CurrentlyAiring");
 });
+const TopRated = lazy(() => {
+  return import("./components/TopRated/TopRated");
+});
 function App() {
   return (
     <>
@@ -25,6 +28,10 @@ function App() {
           <Route
             path="/currently-airing/:page"
             element={<CurrentlyAiring />}
+          ></Route>
+          <Route
+            path="/top-rated/:page"
+            element={<TopRated></TopRated>}
           ></Route>
           <Route path="/anime/:id" element={<DetailedAnime />}></Route>
           <Route path="/character/:id"></Route>

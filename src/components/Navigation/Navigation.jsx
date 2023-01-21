@@ -58,7 +58,7 @@ export default function Navigation(props) {
           </NavLink>
         </li>
         <li className="main-nav__link">
-          <NavLink className={style["nav-link"]} to={"/top-rated"}>
+          <NavLink className={style["nav-link"]} to={"/top-rated/1"}>
             Top Rated
           </NavLink>
         </li>
