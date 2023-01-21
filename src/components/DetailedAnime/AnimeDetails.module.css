@@ -56,6 +56,9 @@ p.synopsis::first-letter {
   font-size: 1.6rem;
   font-weight: bolder;
 }
+.detailed-anime {
+  width: 100%;
+}
 @media screen and (min-width: 700px) {
   .primary-info {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
