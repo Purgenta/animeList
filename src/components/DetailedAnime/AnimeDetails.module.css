@@ -9,7 +9,6 @@
   width: 100%;
   align-items: center;
   padding: 0.2rem 0.4rem;
-  flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
 }
@@ -42,28 +41,55 @@ ul.rankings {
   padding: 0.3rem;
   gap: 0.8rem;
 }
+h2.title {
+  text-align: center;
+}
 h4.studio-name {
   margin-top: 1rem;
   padding: 0.3rem;
 }
+.detailed-anime {
+  width: 100%;
+}
 p.synopsis {
-  width: 70%;
+  padding: 0.4rem 1rem;
   max-width: 700px;
-  margin: 2rem auto;
-  text-align: center;
 }
 p.synopsis::first-letter {
   font-size: 1.6rem;
   font-weight: bolder;
 }
-.detailed-anime {
-  width: 100%;
-}
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 900px) {
   .primary-info {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-areas:
+      "image title title"
+      "image stat stat"
+      "image synopsis synopsis";
+    gap: 1.5rem 2rem;
   }
   .hero-img__container {
     justify-content: right;
+    align-items: flex-start;
+    height: 100%;
+    grid-area: image;
+  }
+  p.synopsis {
+    grid-area: synopsis;
+  }
+  h2.title {
+    grid-area: title;
+  }
+}
+@media screen and (min-width: 900px) {
+  .stats {
+    grid-area: stat;
+  }
+}
+@media screen and (max-width: 460px) {
+  div.primary-info > section {
+    flex-wrap: wrap;
+  }
+  div.primary-info > section > div:first-of-type {
+    border: none;
   }
 }

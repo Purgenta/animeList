@@ -1,6 +1,8 @@
 import style from "./AnimeDetails.module.css";
 import AnimeStats from "./AnimeStats";
 import Characters from "./Character/Characters";
+import routeAnimation from "../../animation/routeAnimation";
+import { motion } from "framer-motion";
 export default function DetailedAnime({ animeData, mal_id }) {
   const {
     images: {
@@ -14,10 +16,14 @@ export default function DetailedAnime({ animeData, mal_id }) {
     studios,
     synopsis,
     scored_by,
-    aired: { from, to },
   } = animeData;
   return (
-    <section className={style["detailed-anime"]}>
+    <motion.section
+      variants={routeAnimation}
+      initial="hidden"
+      animate="visible"
+      className={style["detailed-anime"]}
+    >
       <div className={style["primary-info"]}>
         <div className={style["hero-img__container"]}>
           <img
@@ -26,6 +32,7 @@ export default function DetailedAnime({ animeData, mal_id }) {
             alt={`${title} cover`}
           ></img>
         </div>
+        <h2 className={style["title"]}>{title}</h2>
         <AnimeStats
           score={score}
           members={members}
@@ -34,9 +41,11 @@ export default function DetailedAnime({ animeData, mal_id }) {
           studios={studios}
           scored_by={scored_by}
         ></AnimeStats>
+        <p className={style["synopsis"]}>
+          {synopsis || "No synopsis provided"}
+        </p>
       </div>
-      <p className={style["synopsis"]}>{synopsis || "No synopsis provided"}</p>
       <Characters mal_id={mal_id}></Characters>
-    </section>
+    </motion.section>
   );
 }

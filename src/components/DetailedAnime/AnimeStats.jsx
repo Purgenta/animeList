@@ -1,4 +1,13 @@
 import style from "./AnimeStats.module.css";
+import { motion } from "framer-motion";
+const variants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+  },
+};
 export default function AnimeStats({
   score,
   members,
@@ -12,7 +21,12 @@ export default function AnimeStats({
     studioName = studios[0].name;
   }
   return (
-    <section className={style["stats"]}>
+    <motion.section
+      variants={variants}
+      initial="hidden"
+      animate="visible"
+      className={style["stats"]}
+    >
       <div className={style["score-information"]}>
         <h3>Score</h3>
         <h2 className={style["score"]}>{score || "No score"}</h2>
@@ -40,6 +54,6 @@ export default function AnimeStats({
         </ul>
         <h4 className={style["studio-name"]}>Studio: {studioName}</h4>
       </div>
-    </section>
+    </motion.section>
   );
 }
