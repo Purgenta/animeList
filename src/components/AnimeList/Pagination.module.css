@@ -15,5 +15,17 @@
 }
 a.active {
   font-weight: bolder;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+}
+@media screen and (max-width: 520px) {
+  .pagination a {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+  .pagination {
+    gap: 0.3rem;
+  }
+  a.active {
+    font-size: 1.4rem;
+  }
 }

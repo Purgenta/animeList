@@ -27,7 +27,6 @@ export default function Character({ character, voice_actor }) {
         <h4 className={style["character-name"]}>{name}</h4>
       </div>
       <div className={style["wrapper-voice"]}>
-        <h4 className={style["voice-name"]}>{voiceName}</h4>
         <div className={style["voice-img__container"]}>
           <img
             src={voice_img}
@@ -35,6 +34,7 @@ export default function Character({ character, voice_actor }) {
             alt={`Image of ${voiceName}`}
           ></img>
         </div>
+        <h4 className={style["voice-name"]}>{voiceName}</h4>
       </div>
     </div>
   );

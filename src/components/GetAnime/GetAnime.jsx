@@ -5,6 +5,8 @@ import AnimeList from "../AnimeList/AnimeList";
 import Pagination from "../AnimeList/Pagination";
 import style from "./GetAnime.module.css";
 import EmptyResults from "./EmptyResults";
+import { motion } from "framer-motion";
+import routeAnimation from "../../animation/routeAnimation";
 import { useParams } from "react-router-dom";
 const GetAnime = ({ endPoint, sectionName, baseUrl }) => {
   let { page } = useParams();
@@ -19,7 +21,12 @@ const GetAnime = ({ endPoint, sectionName, baseUrl }) => {
   const data = response && response.data;
   const pagination = response && response.pagination;
   return (
-    <section className={style["results"]}>
+    <motion.section
+      variants={routeAnimation}
+      initial="hidden"
+      animate="visible"
+      className={style["results"]}
+    >
       <h2 className={style["section-title"]}>{sectionName}</h2>
       {error && <div className="error-message">{error}</div>}
       {isLoading && <Loading></Loading>}
@@ -28,7 +35,7 @@ const GetAnime = ({ endPoint, sectionName, baseUrl }) => {
       {response && data.length != 0 && (
         <Pagination pagination={pagination} baseUrl={baseUrl}></Pagination>
       )}
-    </section>
+    </motion.section>
   );
 };
 export default GetAnime;

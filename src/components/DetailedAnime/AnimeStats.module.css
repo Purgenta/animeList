@@ -1,5 +1,5 @@
 @import url("../../variables.css");
-section.stats {
+.stats {
   display: flex;
   justify-content: center;
 }
@@ -21,7 +21,6 @@ section.stats {
   margin-top: 0.6rem;
   text-align: center;
 }
-
 ul.rankings {
   list-style-type: none;
   display: flex;
@@ -31,17 +30,4 @@ ul.rankings {
 h4.studio-name {
   margin-top: 1rem;
   padding: 0.3rem;
-}
-@media screen and (min-width: 700px) {
-  section.stats {
-    grid-column: span 2 / auto;
-  }
-}
-@media screen and (max-width: 460px) {
-  section.stats {
-    flex-wrap: wrap;
-  }
-  .score-information {
-    border: none;
-  }
 }

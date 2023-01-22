@@ -9,10 +9,12 @@
 .hero-voice {
   width: 75px;
 }
-.voice-img__container,
+.voice-img__container {
+  justify-content: left;
+}
 .character-img__container {
   display: flex;
-  justify-content: center;
+  justify-content: right;
 }
 .character-name,
 .voice-name {
@@ -20,21 +22,21 @@
   width: 80px;
 }
 .character-name {
-  text-align: left;
-}
-.voice-name {
-  text-align: end;
+  text-align: right;
+  margin-left: auto;
 }
 .wrapper,
 .wrapper-voice {
   display: flex;
   justify-content: right;
+  flex-direction: column;
 }
-div.wrapper-voice {
+.wrapper-voice {
   justify-content: left;
+  text-align: left;
 }
 @media screen and (max-width: 700px) {
   .character {
-    gap: 0;
+    gap: 3rem;
   }
 }

@@ -2,20 +2,13 @@ import { NavLink, useLocation, useNavigate, useParams } from "react-router-dom";
 import style from "./Navigation.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass, faBars } from "@fortawesome/free-solid-svg-icons";
-import { useRef } from "react";
+import React, { useRef } from "react";
+import ReactDOM from "react-dom";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { useEffect } from "react";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
-const variants = {
-  initial: {
-    opacity: 0,
-  },
-  animate: {
-    opacity: 1,
-  },
-};
-export default function Navigation(props) {
+export default function Navigation() {
   const [navIsOpen, setNavIsOpen] = useState(false);
   const searchRef = useRef();
   const { pathname } = useLocation();
@@ -64,7 +57,7 @@ export default function Navigation(props) {
         </li>
         <li className="main-nav__link">
           <NavLink className={style["nav-link"]} to={"/currently-airing/1"}>
-            Currently Airring
+            Currently Airing
           </NavLink>
         </li>
       </ul>
