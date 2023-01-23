@@ -1,6 +1,6 @@
 import style from "./Character.module.css";
 import { Link } from "react-router-dom";
-export default function Character({ character, voice_actor }) {
+export default function Character({ character, voice_actor, role }) {
   const {
     images: {
       webp: { image_url },
@@ -15,6 +15,7 @@ export default function Character({ character, voice_actor }) {
       },
       name: voiceName,
     },
+    language,
   } = voice_actor;
   return (
     <div className={style["character"]}>
@@ -29,9 +30,16 @@ export default function Character({ character, voice_actor }) {
             alt={`photo of ${name}`}
           ></img>
         </Link>
-        <h4 className={style["character-name"]}>{name}</h4>
+        <div>
+          <h4 className={style["character-name"]}>{name}</h4>
+          <h5 className={style["character-role"]}>{role}</h5>
+        </div>
       </div>
       <div className={style["wrapper-voice"]}>
+        <div>
+          <h4 className={style["voice-name"]}>{voiceName}</h4>
+          <h5 className={style["voice-language"]}>{language}</h5>
+        </div>
         <div className={style["voice-img__container"]}>
           <img
             src={voice_img}
@@ -39,7 +47,6 @@ export default function Character({ character, voice_actor }) {
             alt={`Image of ${voiceName}`}
           ></img>
         </div>
-        <h4 className={style["voice-name"]}>{voiceName}</h4>
       </div>
     </div>
   );

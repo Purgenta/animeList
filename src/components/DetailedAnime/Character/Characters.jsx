@@ -18,7 +18,7 @@ export default function Characters({ mal_id }) {
         character?.name &&
         character?.images?.webp?.["image_url"] &&
         voice_actors.length > 0 &&
-        charactersDisplay.length < 15
+        charactersDisplay.length < 10
       ) {
         charactersDisplay.push(
           <li key={mal_id}>
@@ -37,7 +37,14 @@ export default function Characters({ mal_id }) {
     <section className={style["characters"]}>
       <h2>Characters & Voice Actors</h2>
       {response && !!noCharacters && (
-        <ul className="characters-list">{charactersDisplay}</ul>
+        <div className={style["character-lists"]}>
+          <ul className={style["characters-list"]}>
+            {charactersDisplay.slice(0, charactersDisplay.length / 2)}
+          </ul>
+          <ul className={style["characters-list"]}>
+            {charactersDisplay.slice(charactersDisplay.length / 2)}
+          </ul>
+        </div>
       )}
     </section>
   );
