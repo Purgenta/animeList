@@ -54,6 +54,7 @@ h4.studio-name {
 p.synopsis {
   padding: 0.4rem 1rem;
   max-width: 700px;
+  white-space: pre-wrap;
 }
 p.synopsis::first-letter {
   font-size: 1.6rem;

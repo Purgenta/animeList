@@ -1,0 +1,26 @@
+.nicknames {
+  text-align: center;
+}
+.description {
+  white-space: pre-wrap;
+  max-width: 800px;
+  padding: 1rem;
+}
+.description,
+.featured-in > h2 {
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: center;
+}
+.character-name {
+  margin: 0.5rem;
+}
+.character-img__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.character-img__container > img {
+  width: 250px;
+}
