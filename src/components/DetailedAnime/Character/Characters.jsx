@@ -36,7 +36,7 @@ export default function Characters({ mal_id }) {
   return (
     <section className={style["characters"]}>
       <h2>Characters & Voice Actors</h2>
-      {response && noCharacters && (
+      {response && !!noCharacters && (
         <ul className="characters-list">{charactersDisplay}</ul>
       )}
     </section>
