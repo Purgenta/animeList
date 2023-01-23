@@ -1,42 +1,35 @@
 .character {
   display: grid;
-  gap: 10rem;
+  background-color: #2c3636;
   grid-template-columns: 1fr 1fr;
-  justify-content: space-between;
-  margin: 3.5rem 0rem;
+  text-align: left;
+  gap: 0.3rem;
 }
 .hero-character,
 .hero-voice {
-  width: 75px;
+  width: 70px;
+  height: 100px;
 }
 .voice-img__container {
-  justify-content: left;
+  display: flex;
+  justify-content: right;
 }
 .character-img__container {
   display: flex;
   justify-content: right;
 }
-.character-name,
-.voice-name {
-  margin: 0.3rem;
-  width: 80px;
-}
-.character-name {
-  text-align: right;
-  margin-left: auto;
-}
 .wrapper,
 .wrapper-voice {
   display: flex;
-  justify-content: right;
-  flex-direction: column;
+  justify-content: left;
+  gap: 0.2rem;
 }
 .wrapper-voice {
-  justify-content: left;
-  text-align: left;
+  text-align: right;
+  justify-content: right;
 }
-@media screen and (max-width: 700px) {
-  .character {
-    gap: 3rem;
-  }
+.character-role,
+.voice-language {
+  font-weight: 200;
+  margin-top: 0.3rem;
 }

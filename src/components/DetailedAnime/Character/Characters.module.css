@@ -1,6 +1,6 @@
 section.characters {
   margin-top: 2rem;
-  padding: 0.5rem;
+  padding: 1rem 2rem;
 }
 section.characters > h2 {
   margin: 0.6rem;
@@ -9,4 +9,19 @@ section.characters > h2 {
 .empty {
   padding: 2rem;
   text-align: center;
+}
+.character-lists {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  gap: 2rem;
+  margin: 1.5rem 0rem;
+}
+.characters-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1 1 0px;
 }
