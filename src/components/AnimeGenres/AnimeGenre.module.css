@@ -1,0 +1,13 @@
+.genres {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin: 0.35rem 0rem;
+}
+.genre {
+  padding: 0.2rem 0.4rem;
+  font-size: 0.8rem;
+  border: 1px solid;
+  border-radius: 0.3rem;
+}

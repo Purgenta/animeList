@@ -31,8 +31,8 @@ const GetAnime = ({ endPoint, sectionName, baseUrl }) => {
       {error && <div className="error-message">{error}</div>}
       {isLoading && <Loading></Loading>}
       {response && data.length == 0 && <EmptyResults></EmptyResults>}
-      {response && data.length != 0 && <AnimeList data={data}></AnimeList>}
-      {response && data.length != 0 && (
+      {response && data.length !== 0 && <AnimeList data={data}></AnimeList>}
+      {response && data.length !== 0 && (
         <Pagination pagination={pagination} baseUrl={baseUrl}></Pagination>
       )}
     </motion.section>

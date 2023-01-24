@@ -1,6 +1,10 @@
 section.characters {
   margin-top: 2rem;
   padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 section.characters > h2 {
   margin: 0.6rem;
@@ -13,10 +17,12 @@ section.characters > h2 {
 .character-lists {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-evenly;
   gap: 2rem;
   margin: 1.5rem 0rem;
+  width: 100%;
+  max-width: 1200px;
 }
 .characters-list {
   list-style-type: none;

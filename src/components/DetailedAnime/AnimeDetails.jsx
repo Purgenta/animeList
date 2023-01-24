@@ -3,6 +3,7 @@ import AnimeStats from "./AnimeStats";
 import Characters from "./Character/Characters";
 import routeAnimation from "../../animation/routeAnimation";
 import { motion } from "framer-motion";
+import AnimeGenre from "../AnimeGenres/AnimeGenre";
 export default function DetailedAnime({ animeData, mal_id }) {
   const {
     images: {
@@ -16,6 +17,7 @@ export default function DetailedAnime({ animeData, mal_id }) {
     studios,
     synopsis,
     scored_by,
+    genres,
   } = animeData;
   return (
     <motion.section
@@ -31,8 +33,11 @@ export default function DetailedAnime({ animeData, mal_id }) {
             className={style["hero-img"]}
             alt={`${title} cover`}
           ></img>
+          <AnimeGenre genres={genres} />
         </div>
-        <h2 className={style["title"]}>{title}</h2>
+        <div className={style["title"]}>
+          <h2>{title}</h2>
+        </div>
         <AnimeStats
           score={score}
           members={members}

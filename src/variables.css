@@ -3,5 +3,7 @@
   --main-input-field-color: #a9a9a9;
   --main-overlay-color: #c7c2c2;
   --main-body-color: #232b2b;
+  --main-highlight-color: #2c3636;
+  --main-navbar-overlay-color: rgba(35, 43, 43, 0.2);
   --main-button-background: linear-gradient(to right, #cb2d3e, #ef473a);
 }

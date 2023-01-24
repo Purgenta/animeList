@@ -8,6 +8,7 @@ const AnimeList = ({ data }) => {
         webp: { image_url },
       },
       title,
+      genres,
     } = anime;
     return (
       <AnimeItem
@@ -16,6 +17,7 @@ const AnimeList = ({ data }) => {
         shouldDefer={9 <= index}
         key={mal_id}
         title={title}
+        genres={genres}
       ></AnimeItem>
     );
   });
