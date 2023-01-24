@@ -1,0 +1,42 @@
+.featured-anime {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.35) 0%,
+      rgba(0, 0, 0, 0.35) 100%
+    ),
+    url("../../assets/anime-digital-art-artwork-2d-portrait-display-hd-wallpaper-preview.jpg");
+  background-position: center 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+.home {
+  flex-grow: 1;
+}
+.welcome-message {
+  text-align: center;
+}
+.welcome-message {
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: bolder;
+}
+.website-information {
+  margin-top: 2rem;
+  line-height: 1.8;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+@media screen and (max-width: 600px) {
+  .welcome-message {
+    font-size: 2.4rem;
+  }
+  .website-information {
+    font-size: 1rem;
+  }
+}

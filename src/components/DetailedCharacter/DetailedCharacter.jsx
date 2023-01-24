@@ -12,7 +12,6 @@ export default function DetailedCharacter(props) {
   useEffect(() => {
     fetchCharacterData();
   }, []);
-  console.log(response);
   return (
     <>
       {isLoading && <Loading></Loading>}
