@@ -1,5 +1,6 @@
 import style from "./AnimeStats.module.css";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 const variants = {
   hidden: {
     opacity: 0,
@@ -17,8 +18,10 @@ export default function AnimeStats({
   scored_by,
 }) {
   let studioName = "No studio name";
+  let studioId;
   if (studios.length > 0 && studios[0]?.name) {
     studioName = studios[0].name;
+    studioId = studios[0]["mal_id"];
   }
   return (
     <motion.section
@@ -52,7 +55,9 @@ export default function AnimeStats({
             <h3 className="stat">Members: {members}</h3>
           </li>
         </ul>
-        <h4 className={style["studio-name"]}>Studio: {studioName}</h4>
+        <Link to={`/producer/${studioId}`} className={style["studio-name"]}>
+          Studio: {studioName}
+        </Link>
       </div>
     </motion.section>
   );
