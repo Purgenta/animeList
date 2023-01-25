@@ -4,6 +4,7 @@
   flex-wrap: wrap;
   gap: 0.25rem;
   margin: 0.35rem 0rem;
+  width: 100%;
 }
 .genre {
   padding: 0.2rem 0.4rem;
