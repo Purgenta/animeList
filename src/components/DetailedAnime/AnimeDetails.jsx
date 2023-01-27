@@ -18,12 +18,14 @@ export default function DetailedAnime({ animeData, mal_id }) {
     synopsis,
     scored_by,
     genres,
+    trailer: { embed_url },
   } = animeData;
   return (
     <motion.section
       variants={routeAnimation}
       initial="hidden"
       animate="visible"
+      exit="exit"
       className={style["detailed-anime"]}
     >
       <div className={style["primary-info"]}>
@@ -50,6 +52,18 @@ export default function DetailedAnime({ animeData, mal_id }) {
           {synopsis || "No synopsis provided"}
         </p>
       </div>
+      {embed_url && (
+        <div className={style["trailer"]}>
+          <iframe
+            id="ytplayer"
+            type="text/html"
+            width="860"
+            height="480"
+            src={embed_url}
+            frameBorder="0"
+          ></iframe>
+        </div>
+      )}
       <Characters mal_id={mal_id}></Characters>
     </motion.section>
   );

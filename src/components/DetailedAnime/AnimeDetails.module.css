@@ -1,10 +1,21 @@
 @import url("../../variables.css");
-.hero-img__container {
+.hero-img__container,
+.trailer {
   display: flex;
-  width: 100%;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+}
+.hero-img__container > ul {
+  width: initial;
+}
+.trailer {
+  margin: 2rem 0rem;
+  max-width: 860px;
+  max-height: 480px;
+}
+.trailer > iframe {
+  display: block;
 }
 .primary-info {
   display: grid;
@@ -52,6 +63,9 @@ h4.studio-name {
 }
 .detailed-anime {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 p.synopsis {
   padding: 0.4rem 1rem;

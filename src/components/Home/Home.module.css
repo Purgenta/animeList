@@ -13,7 +13,6 @@
   width: 100%;
   justify-content: center;
   align-items: center;
-  padding: 0.5rem;
 }
 .home {
   flex-grow: 1;
