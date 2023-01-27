@@ -25,6 +25,7 @@ const GetAnime = ({ endPoint, sectionName, baseUrl }) => {
       variants={routeAnimation}
       initial="hidden"
       animate="visible"
+      exit="exit"
       className={style["results"]}
     >
       <h2 className={style["section-title"]}>{sectionName}</h2>

@@ -19,7 +19,7 @@ export default function CharacterDetails({ animeData }) {
   ].join(" ");
   const animeList = starringIn.map((value) => value["anime"]);
   return (
-    <section className={style["featured-in"]}>
+    <section className={style["detailed-character"]}>
       {!!nicknames.length && <h2 className={style["nicknames"]}>{nickname}</h2>}
       <div className="character-info">
         <div className={style["character-img__container"]}>
@@ -33,8 +33,10 @@ export default function CharacterDetails({ animeData }) {
         </div>
         <p className={style["description"]}>{about}</p>
       </div>
-      <h2 className={style["featured-in"]}>Featured in</h2>
-      <AnimeList data={animeList}></AnimeList>{" "}
+      <section className={style["featured-in"]}>
+        <h2 className={style["featured-in"]}>Featured in</h2>
+        <AnimeList data={animeList}></AnimeList>{" "}
+      </section>
     </section>
   );
 }

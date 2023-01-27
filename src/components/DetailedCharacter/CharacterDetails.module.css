@@ -7,7 +7,7 @@
   padding: 1rem;
 }
 .description,
-.featured-in > h2 {
+.detailed-character > h2 {
   max-width: 800px;
   margin: 2rem auto;
   text-align: center;
