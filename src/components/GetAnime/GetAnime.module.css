@@ -6,7 +6,7 @@
   flex-direction: column;
 }
 .section-title {
-  text-align: center;
   font-size: 1.8rem;
   margin: 1rem 0.2rem;
+  margin-bottom: 2rem;
 }

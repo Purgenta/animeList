@@ -10,12 +10,22 @@
   width: initial;
 }
 .trailer {
-  margin: 2rem 0rem;
+  overflow: hidden;
+  width: 90%;
   max-width: 860px;
-  max-height: 480px;
+  max-height: 485px;
+  min-height: 250px;
+  margin: 1.5rem auto;
+  padding-top: 42.08%;
+  position: relative;
 }
-.trailer > iframe {
-  display: block;
+.trailer iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  width: 100%;
+  height: 100%;
 }
 .primary-info {
   display: grid;
@@ -63,6 +73,7 @@ h4.studio-name {
 }
 .detailed-anime {
   width: 100%;
+  padding: 2rem 0rem;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -57,9 +57,8 @@ export default function DetailedAnime({ animeData, mal_id }) {
           <iframe
             id="ytplayer"
             type="text/html"
-            width="860"
-            height="480"
             src={embed_url}
+            allowFullScreen
             frameBorder="0"
           ></iframe>
         </div>

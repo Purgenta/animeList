@@ -38,6 +38,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--main-highlight-darker-color);
 }
 .search-bar {
   border-radius: 0.9rem;
@@ -67,7 +68,7 @@ ul.active {
   transform: translateY(100%);
   transition: 0.5s ease-out;
 }
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 860px) {
   .hamburger-menu {
     display: block;
   }
