@@ -3,7 +3,6 @@ import style from "./Navigation.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass, faBars } from "@fortawesome/free-solid-svg-icons";
 import React, { useRef } from "react";
-import ReactDOM from "react-dom";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -46,8 +45,8 @@ export default function Navigation() {
           </NavLink>
         </li>
         <li className="main-nav__link">
-          <NavLink className={style["nav-link"]} to={"/search"}>
-            Search
+          <NavLink className={style["nav-link"]} to={"/upcoming/1"}>
+            Upcoming
           </NavLink>
         </li>
         <li className="main-nav__link">

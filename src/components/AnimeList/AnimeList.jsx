@@ -14,7 +14,7 @@ const AnimeList = ({ data }) => {
       <AnimeItem
         image_url={image_url}
         mal_id={mal_id}
-        shouldDefer={9 <= index}
+        shouldDefer={3 <= index}
         key={mal_id}
         title={title}
         genres={genres}

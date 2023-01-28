@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import style from "./Pagination.module.css";
 import generateRange from "../../utility/generateRange";
+import { useNavigate } from "react-router-dom";
 const Pagination = ({ pagination, baseUrl }) => {
+  const navigate = useNavigate();
   const { current_page, last_visible_page } = pagination;
   let paginationLinks = [];
   if (last_visible_page <= 5) {
@@ -48,20 +50,37 @@ const Pagination = ({ pagination, baseUrl }) => {
     });
   }
   return (
-    <nav aria-label="pagination" className="nav-pagination">
+    <nav aria-label="pagination" className={style["nav-pagination"]}>
       <ul className={style["pagination"]}>
         {current_page != 1 && (
           <li className="navigation-control">
-            <Link to={`${baseUrl}/${current_page - 1}`}>{`<<`}</Link>
+            <Link to={`${baseUrl}/${current_page - 1}`}>{`<`}</Link>
           </li>
         )}
         {paginationLinks}
         {current_page != last_visible_page && (
           <li className="navigation-control">
-            <Link to={`${baseUrl}/${current_page + 1}`}>{`>>`}</Link>
+            <Link to={`${baseUrl}/${current_page + 1}`}>{`>`}</Link>
           </li>
         )}
       </ul>
+      <div className={style["go-to"]}>
+        <label htmlFor="page-goto">Go to</label>
+        <input
+          max={last_visible_page}
+          min={1}
+          type="number"
+          id="page-goto"
+          name="page-goto"
+        />
+        <button
+          onClick={() => {
+            navigate();
+          }}
+        >
+          Go
+        </button>
+      </div>
     </nav>
   );
 };

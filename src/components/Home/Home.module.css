@@ -1,11 +1,12 @@
+@import url("../../variables.css");
 .featured-anime {
   background-image: linear-gradient(
       to right,
       rgba(0, 0, 0, 0.35) 0%,
       rgba(0, 0, 0, 0.35) 100%
     ),
-    url("../../assets/anime-digital-art-artwork-2d-portrait-display-hd-wallpaper-preview.jpg");
-  background-position: center 50%;
+    url("../../assets/coverHero.jpg");
+  background-position: left 50%;
   background-repeat: no-repeat;
   background-size: cover;
   height: 80vh;
@@ -19,9 +20,6 @@
 }
 .welcome-message {
   text-align: center;
-}
-.welcome-message {
-  text-align: center;
   font-size: 3.5rem;
   font-weight: bolder;
 }
@@ -29,6 +27,7 @@
   margin-top: 2rem;
   line-height: 1.8;
   font-size: 1.2rem;
+  text-align: center;
   font-weight: bold;
 }
 @media screen and (max-width: 600px) {
@@ -38,4 +37,21 @@
   .website-information {
     font-size: 1rem;
   }
+}
+.wrapper {
+  display: flex;
+  margin: 2rem 0rem;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.wrapper > * {
+  width: 90%;
+}
+.wrapper > h3 {
+  padding-left: 0.4rem;
+  font-size: 1.4rem;
+  border-left: 6px solid;
+  border-image: var(--main-button-background) 1;
 }

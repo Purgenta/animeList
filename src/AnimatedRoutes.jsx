@@ -1,9 +1,11 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import Loading from "./components/Loading/Loading";
-import Search from "./components/Search/Search";
 import { AnimatePresence } from "framer-motion";
 import DetailedCharacter from "./components/DetailedCharacter/DetailedCharacter";
+const Search = lazy(() => {
+  return import("./components/Navigation/Search");
+});
 const DetailedAnime = lazy(() => {
   return import("./components/DetailedAnime/DetailedAnime");
 });
@@ -11,13 +13,16 @@ const Home = lazy(() => {
   return import("./components/Home/Home");
 });
 const CurrentlyAiring = lazy(() => {
-  return import("./components/CurrentlyAiring/CurrentlyAiring");
+  return import("./components/Navigation/CurrentlyAiring");
 });
 const TopRated = lazy(() => {
-  return import("./components/TopRated/TopRated");
+  return import("./components/Navigation/TopRated");
 });
 const Producer = lazy(() => {
-  return import("./components/Producer/Producer");
+  return import("./components/Navigation/Producer");
+});
+const Upcoming = lazy(() => {
+  return import("./components/Navigation/Upcoming");
 });
 export default function AnimatedRoutes() {
   const location = useLocation();
@@ -49,6 +54,8 @@ export default function AnimatedRoutes() {
             path="/producer/:id/:page"
             element={<Producer></Producer>}
           ></Route>
+          <Route path="/upcoming" element={<Upcoming />}></Route>
+          <Route path="/upcoming/:page" element={<Upcoming />}></Route>
           <Route path="/" element={<Home />}></Route>
           <Route path="" element={<Home />}></Route>
         </Routes>

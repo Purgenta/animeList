@@ -1,4 +1,5 @@
 import style from "./Home.module.css";
+import AnimeCarousel from "../Carousel/AnimeCarousel";
 export default function Home(props) {
   return (
     <section className={style["home"]}>
@@ -12,6 +13,18 @@ export default function Home(props) {
           </p>
         </div>
       </section>
+      <div className={style["wrapper"]}>
+        <h3>Top Rated</h3>
+        <AnimeCarousel
+          endpoint={`anime?q=&order_by=score&sort=desc&limit=15`}
+        />
+      </div>
+      <div className={style["wrapper"]}>
+        <h3>Currently Airing</h3>
+        <AnimeCarousel
+          endpoint={`anime?q=&status=airing&order_by=score&sort=desc&limit=15`}
+        />
+      </div>
     </section>
   );
 }

@@ -9,7 +9,7 @@
 }
 .hero-character,
 .hero-voice {
-  width: 70px;
+  width: 64px;
   height: 100px;
 }
 .voice-img__container {
@@ -30,8 +30,13 @@
   text-align: right;
   justify-content: right;
 }
+.voice-name,
+.character-name {
+  font-size: 1rem;
+}
 .character-role,
 .voice-language {
   font-weight: 200;
+  font-size: 0.8rem;
   margin-top: 0.2rem;
 }

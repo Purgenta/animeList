@@ -1,0 +1,10 @@
+@import url("../../variables.css");
+:root {
+  --swiper-theme-color: var(--main-text-color);
+}
+.anime-carousel {
+  max-width: 90vw;
+}
+.swiper-slide ul {
+  display: none;
+}

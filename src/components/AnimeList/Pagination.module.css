@@ -7,6 +7,19 @@
   gap: 0.6rem;
   color: var(--main-text-color);
 }
+.go-to {
+  margin-top: 1rem;
+}
+.go-to > label {
+  display: block;
+  text-align: center;
+  margin: 0.5rem 0rem;
+}
+.nav-pagination {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .pagination a {
   font-size: 1.4rem;
   color: inherit;
