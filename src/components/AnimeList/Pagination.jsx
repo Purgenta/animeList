@@ -1,10 +1,18 @@
 import { Link } from "react-router-dom";
 import style from "./Pagination.module.css";
 import generateRange from "../../utility/generateRange";
+import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 const Pagination = ({ pagination, baseUrl }) => {
   const navigate = useNavigate();
+  const pageGotoRef = useRef();
   const { current_page, last_visible_page } = pagination;
+  const handleGoto = () => {
+    const navigateTo = pageGotoRef.current.value;
+    if (navigateTo !== "") {
+      navigate(`${baseUrl}/${navigateTo}`);
+    }
+  };
   let paginationLinks = [];
   if (last_visible_page <= 5) {
     paginationLinks = generateRange(1, last_visible_page).map((value) => {
@@ -66,20 +74,17 @@ const Pagination = ({ pagination, baseUrl }) => {
       </ul>
       <div className={style["go-to"]}>
         <label htmlFor="page-goto">Go to</label>
-        <input
-          max={last_visible_page}
-          min={1}
-          type="number"
-          id="page-goto"
-          name="page-goto"
-        />
-        <button
-          onClick={() => {
-            navigate();
-          }}
-        >
-          Go
-        </button>
+        <div>
+          <input
+            max={last_visible_page}
+            min={1}
+            ref={pageGotoRef}
+            type="number"
+            id="page-goto"
+            name="page-goto"
+          />
+          <button onClick={handleGoto}>{`>`}</button>
+        </div>
       </div>
     </nav>
   );

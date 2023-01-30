@@ -55,7 +55,10 @@ export default function AnimeStats({
             <h3 className="stat">Members: {members}</h3>
           </li>
         </ul>
-        <Link to={`/producer/${studioId}`} className={style["studio-name"]}>
+        <Link
+          to={`/producer/${studioName}/${studioId}`}
+          className={style["studio-name"]}
+        >
           Studio: {studioName}
         </Link>
       </div>

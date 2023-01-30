@@ -3,6 +3,9 @@ import { lazy, Suspense } from "react";
 import Loading from "./components/Loading/Loading";
 import { AnimatePresence } from "framer-motion";
 import DetailedCharacter from "./components/DetailedCharacter/DetailedCharacter";
+const Genre = lazy(() => {
+  return import("./components/Navigation/Genre");
+});
 const Search = lazy(() => {
   return import("./components/Navigation/Search");
 });
@@ -49,13 +52,15 @@ export default function AnimatedRoutes() {
             path="/search/:searchName/:page"
             element={<Search></Search>}
           ></Route>
-          <Route path="/producer/:id" element={<Producer></Producer>} />
+          <Route path="/producer/:name/:id" element={<Producer></Producer>} />
           <Route
-            path="/producer/:id/:page"
+            path="/producer/:name/:id/:page"
             element={<Producer></Producer>}
           ></Route>
           <Route path="/upcoming" element={<Upcoming />}></Route>
           <Route path="/upcoming/:page" element={<Upcoming />}></Route>
+          <Route path="/genre/:name/:id/:page" element={<Genre />}></Route>
+          <Route path="/genre/:name/:id" element={<Genre />}></Route>
           <Route path="/" element={<Home />}></Route>
           <Route path="" element={<Home />}></Route>
         </Routes>

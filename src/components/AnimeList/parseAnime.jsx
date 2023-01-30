@@ -10,16 +10,18 @@ const parseAnime = (data, Wrapper) => {
       genres,
     } = anime;
     return (
-      <Wrapper key={mal_id}>
-        <CarouselCard
-          image_url={image_url}
-          mal_id={mal_id}
-          shouldDefer={3 <= index}
-          key={mal_id}
-          title={title}
-          genres={genres}
-        ></CarouselCard>
-      </Wrapper>
+      <li key={mal_id}>
+        <Wrapper key={mal_id}>
+          <CarouselCard
+            image_url={image_url}
+            mal_id={mal_id}
+            shouldDefer={3 <= index}
+            key={mal_id}
+            title={title}
+            genres={genres}
+          ></CarouselCard>
+        </Wrapper>
+      </li>
     );
   });
   return animeList;

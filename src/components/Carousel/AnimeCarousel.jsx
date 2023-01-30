@@ -4,7 +4,6 @@ import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import parseAnime from "../AnimeList/parseAnime";
 import { Navigation } from "swiper";
-import CarouselList from "./CarouselList";
 import { useEffect } from "react";
 import "./AnimeCarousel.css";
 export default function AnimeCarousel({ endpoint }) {
@@ -16,7 +15,7 @@ export default function AnimeCarousel({ endpoint }) {
     <Swiper
       modules={[Navigation]}
       navigation
-      tag="ul"
+      tag="div"
       className={"anime-carousel"}
       direction="horizontal"
       breakpoints={{
@@ -50,7 +49,7 @@ export default function AnimeCarousel({ endpoint }) {
         },
       }}
     >
-      {response && parseAnime(response.data, SwiperSlide)}
+      {response && <ul>{parseAnime(response.data, SwiperSlide)}</ul>}
     </Swiper>
   );
 }
