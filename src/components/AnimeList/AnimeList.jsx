@@ -11,14 +11,15 @@ const AnimeList = ({ data }) => {
       genres,
     } = anime;
     return (
-      <AnimeItem
-        image_url={image_url}
-        mal_id={mal_id}
-        shouldDefer={3 <= index}
-        key={mal_id}
-        title={title}
-        genres={genres}
-      ></AnimeItem>
+      <li key={mal_id}>
+        <AnimeItem
+          image_url={image_url}
+          mal_id={mal_id}
+          shouldDefer={3 <= index}
+          title={title}
+          genres={genres}
+        ></AnimeItem>
+      </li>
     );
   });
   return <ul className={style["search-results"]}>{animeList}</ul>;

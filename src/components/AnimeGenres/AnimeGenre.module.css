@@ -1,3 +1,4 @@
+@import url("../../variables.css");
 .genres {
   list-style-type: none;
   display: flex;
@@ -8,7 +9,9 @@
 }
 .genre {
   padding: 0.2rem 0.4rem;
-  font-size: 0.8rem;
+  font-size: 1rem;
   border: 1px solid;
   border-radius: 0.3rem;
+  color: var(--main-text-color);
+  display: block;
 }

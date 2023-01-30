@@ -58,6 +58,7 @@ export default function DetailedAnime({ animeData, mal_id }) {
             id="ytplayer"
             type="text/html"
             src={embed_url}
+            title={`${title} trailer`}
             allowFullScreen
             frameBorder="0"
           ></iframe>

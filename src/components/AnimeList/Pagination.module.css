@@ -7,9 +7,6 @@
   gap: 0.6rem;
   color: var(--main-text-color);
 }
-.go-to {
-  margin-top: 1rem;
-}
 .go-to > label {
   display: block;
   text-align: center;
@@ -29,6 +26,30 @@
 a.active {
   font-weight: bolder;
   font-size: 1.8rem;
+}
+.go-to {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.go-to input {
+  background-color: var(--main-input-field-color);
+  border-radius: 5px;
+  font-size: 1.4rem;
+  padding: 0.1rem 0.4rem;
+  margin: 0rem 0.3rem;
+}
+.go-to button {
+  background: var(--main-button-background);
+  color: var(--main-text-color);
+  font-size: 1.4rem;
+  border-radius: 5px;
+  padding: 0.2rem 0.4rem;
+}
+.go-to input[type="number"]::-webkit-inner-spin-button,
+.go-to input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 @media screen and (max-width: 520px) {
   .pagination a {

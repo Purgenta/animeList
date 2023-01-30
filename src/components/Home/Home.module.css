@@ -24,9 +24,10 @@
   font-weight: bolder;
 }
 .website-information {
-  margin-top: 2rem;
+  margin: 2rem auto;
   line-height: 1.8;
   font-size: 1.2rem;
+  max-width: 350px;
   text-align: center;
   font-weight: bold;
 }
@@ -49,7 +50,7 @@
 .wrapper > * {
   width: 90%;
 }
-.wrapper > h3 {
+.wrapper > h2 {
   padding-left: 0.4rem;
   font-size: 1.4rem;
   border-left: 6px solid;

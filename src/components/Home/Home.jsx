@@ -14,13 +14,13 @@ export default function Home(props) {
         </div>
       </section>
       <div className={style["wrapper"]}>
-        <h3>Top Rated</h3>
+        <h2>Top Rated</h2>
         <AnimeCarousel
           endpoint={`anime?q=&order_by=score&sort=desc&limit=15`}
         />
       </div>
       <div className={style["wrapper"]}>
-        <h3>Currently Airing</h3>
+        <h2>Currently Airing</h2>
         <AnimeCarousel
           endpoint={`anime?q=&status=airing&order_by=score&sort=desc&limit=15`}
         />

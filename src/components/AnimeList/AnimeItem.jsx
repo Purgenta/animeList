@@ -10,7 +10,7 @@ export default function AnimeItem({
   genres,
 }) {
   return (
-    <motion.li
+    <motion.div
       whileHover={{ backgroundColor: "#2c3636" }}
       className={style["anime-item"]}
     >
@@ -28,6 +28,6 @@ export default function AnimeItem({
         <AnimeGenre genres={genres}></AnimeGenre>
         <h3 className={style["anime-item__title"]}>{title}</h3>
       </div>
-    </motion.li>
+    </motion.div>
   );
 }
