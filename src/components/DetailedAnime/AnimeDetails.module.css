@@ -12,7 +12,6 @@
 .trailer {
   overflow: hidden;
   width: 90%;
-  max-width: 860px;
   max-height: 485px;
   min-height: 250px;
   margin: 1.5rem auto;
@@ -73,6 +72,7 @@ h4.studio-name {
 }
 .detailed-anime {
   width: 100%;
+  max-width: 1200px;
   padding: 2rem 0rem;
   display: flex;
   flex-direction: column;

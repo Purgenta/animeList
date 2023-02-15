@@ -13,7 +13,7 @@ const DetailedAnime = lazy(() => {
   return import("./components/DetailedAnime/DetailedAnime");
 });
 const Home = lazy(() => {
-  return import("./components/Home/Home");
+  return import("./components/Navigation/Home/Home");
 });
 const CurrentlyAiring = lazy(() => {
   return import("./components/Navigation/CurrentlyAiring");

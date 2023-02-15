@@ -1,11 +1,11 @@
-@import url("../../variables.css");
+@import url("../../../variables.css");
 .featured-anime {
   background-image: linear-gradient(
       to right,
       rgba(0, 0, 0, 0.35) 0%,
       rgba(0, 0, 0, 0.35) 100%
     ),
-    url("../../assets/coverHero.jpg");
+    url("../../../assets/homeCover.jpg");
   background-position: left 50%;
   background-repeat: no-repeat;
   background-size: cover;
