@@ -33,6 +33,9 @@ export default function Characters({ mal_id }) {
     });
   }
   const noCharacters = charactersDisplay.length;
+  if (!noCharacters) {
+    return <></>;
+  }
   return (
     <section className={style["characters"]}>
       <h2>Characters & Voice Actors</h2>
