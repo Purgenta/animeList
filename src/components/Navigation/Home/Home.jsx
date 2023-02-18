@@ -1,5 +1,5 @@
 import style from "./Home.module.css";
-import AnimeCarousel from "../Carousel/AnimeCarousel";
+import AnimeCarousel from "../../Carousel/AnimeCarousel";
 export default function Home(props) {
   return (
     <section className={style["home"]}>
